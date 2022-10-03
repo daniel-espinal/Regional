@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="EEHCompetitividadRegional.main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <title>EEH Competitividad Regional</title>
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/colors/default.css" id="theme" rel="stylesheet">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="fix-header">
+
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <div class="top-left-part">
+                    <!-- Logo -->
+                    <a class="logo" href="default.aspx">
+                        <b></b>
+                        <span class="hidden-xs">
+                            <img src="plugins/images/admin-text.png" alt="home" class="dark-logo" /><!--This is light logo text--><img src="img/logo.fw.png" alt="home" class="light-logo" />
+                        </span></a>
+                </div>
+                <!-- /Logo -->
+                <!-- Search input and Toggle icon -->
+                <ul class="nav navbar-top-links navbar-left">
+                    <li><a href="javascript:void(0)" class="open-close waves-effect waves-light"><i class="glyphicon glyphicon-menu-left"></i></a></li>
+                    <!-- .Megamenu -->
+                    <li class=""><a class="waves-effect waves-light"  href="logout.aspx"><span class="">Salir</span> <i class="glyphicon glyphicon-log-out"></i></a></li>
+                    <!-- /.Megamenu -->
+                </ul>
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                    <li>
+                        <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
+                            <input type="text" placeholder="Buscar..." class="form-control">
+                            <a href="#"><i class="glyphicon glyphicon-search"></i></a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav slimscrollsidebar">
+                <div class="sidebar-head">
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span><span class="hide-menu">Navigation</span></h3>
+                </div>
+                <div class="user-profile">
+                    <div class="dropdown user-pro-body">
+                    </div>
+                </div>
+
+                <ul class="nav" id="side-menu">
+
+                    <li><a href="default.aspx" class="waves-effect active"><i class="mdi mdi-alert-circle-outline fa-fw" data-icon="v"></i><span class="hide-menu">Instrucciones <span class=""></span></span></a></li>
+
+                    <li class="devider"></li>
+
+                    <li><a href="analisis.aspx" class="waves-effect"><i class="mdi mdi-account-plus fa-fw"></i><span class="hide-menu">Ingresar Información</span></a> </li>
+
+                    <li><a href="consultas.aspx" class="waves-effect"><i class="mdi mdi-database fa-fw"></i><span class="hide-menu">Consultar codigo</span></a> </li>
+
+                    <asp:Literal ID="LitMenu" runat="server" Visible="false">
+                        <li><a href="actualizaciones.aspx" class="waves-effect"><i class="mdi mdi-chemical-weapon fa-fw"></i><span class="hide-menu">Actualización analisis</span></a> </li>
+                    </asp:Literal>
+
+
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Competitividad Regional</h4>
+                    </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+
+                        <a href="http://www.eeh.hn" target="_blank" class="btn btn-danger pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">EEH</a>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Ingresar a la pagina de la empresa</a></li>
+
+                        </ol>
+                    </div>
+
+                </div>
+
+
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+
+
+            </div>
+            <footer class="footer text-center">2019 &copy; Empresa Energia Honduras </footer>
+        </div>
+    </div>
+
+
+
+
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <script src="js/jquery.slimscroll.js"></script>
+    <script src="js/waves.js"></script>
+
+    <script src="js/custom.min.js"></script>
+    <script src="js/jasny-bootstrap.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
