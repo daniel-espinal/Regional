@@ -22,6 +22,7 @@
                                                 <asp:TextBox class="form-control" ID="txCodigoCliente" placeholder="Codigo" runat="server"></asp:TextBox>
                                                 <div class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></div>
                                             </div>
+
                                             <br />
                                             <label for="m-t-40">Telefono</label>
                                             <div class="input-group" data-placement="bottom" data-align="top" data-autoclose="true">
